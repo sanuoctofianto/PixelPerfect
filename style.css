@@ -1,0 +1,84 @@
+/* Menggunakan font Inter sebagai default */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8fafc; /* slate-50 */
+}
+/* Efek smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Animasi sederhana untuk header */
+.header-animate {
+  transition: all 0.3s ease-in-out;
+}
+
+/* --- CSS KUSTOM TAMBAHAN --- */
+
+/* 1. Efek gradien untuk headline utama */
+.gradient-text {
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-emphasis-color: transparent;
+}
+
+/* 2. Animasi hover untuk tombol CTA */
+.cta-button-animate {
+  transition: all 0.3s ease-in-out;
+}
+.cta-button-animate:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* 3. Efek hover untuk kartu fitur dan testimoni */
+.card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Efek overlay dan ikon pada galeri */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem; /* rounded-lg */
+}
+.gallery-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+.gallery-item img {
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* 5. Animasi fade-in saat scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1),
+    transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
